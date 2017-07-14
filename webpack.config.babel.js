@@ -1,10 +1,14 @@
-const path = require('path')
+import path from 'path'
+
+const jsPath = path.resolve(__dirname, 'app', 'js')
 
 module.exports = {
-  entry: path.resolve(__dirname, 'app', 'js', 'index.js'),
+  entry: {
+    login: path.resolve(jsPath, 'login')
+  },
   output: {
     path: path.resolve(__dirname, 'app'),
-    filename: 'app.bundle.js'
+    filename: '[name].js'
   },
   module: {
     rules: [
