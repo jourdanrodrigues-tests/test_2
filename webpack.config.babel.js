@@ -1,10 +1,10 @@
 import path from 'path'
 
-const jsPath = path.resolve(__dirname, 'app', 'js')
+const appPath = path.resolve(__dirname, 'app')
 
 module.exports = {
   entry: {
-    login: path.resolve(jsPath, 'login')
+    login: path.resolve(appPath, 'login')
   },
   output: {
     path: path.resolve(__dirname, 'app'),
