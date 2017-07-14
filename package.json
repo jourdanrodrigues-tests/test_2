@@ -23,7 +23,7 @@
   },
   "scripts": {
     "predev": "echo \"\\033[1;33mThe SASS files compilation for development happens running \\\"./node_modules/.bin/gulp compile:css:watch\\\" on a separated terminal!\\033[0m\"",
-    "dev": "webpack-dev-server --watch",
+    "dev": "webpack-dev-server --watch --hot --inline",
     "prestart": "gulp compile:css && webpack",
     "start": "node .",
     "test": "echo \"Error: no test specified\" && exit 1"
