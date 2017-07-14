@@ -1,5 +1,6 @@
 # Files
 app/*.js
+*.css
 .DS_Store
 
 # Directories
