@@ -7,8 +7,12 @@ module.exports = {
     login: path.resolve(appPath, 'login')
   },
   output: {
-    path: path.resolve(__dirname, 'app'),
+    path: appPath,
     filename: '[name].js'
+  },
+  devServer: {
+    contentBase: appPath,
+    hot: true
   },
   module: {
     rules: [
