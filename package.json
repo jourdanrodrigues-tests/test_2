@@ -21,7 +21,7 @@
     "webpack": "^3.2.0"
   },
   "scripts": {
-    "prestart": "webpack",
+    "prestart": "gulp compile:css && webpack",
     "start": "node .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
