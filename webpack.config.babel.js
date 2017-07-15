@@ -9,12 +9,17 @@ const config = {
   }
 }
 
-const loginPath = path.resolve(__dirname, 'src', 'login')
-const loginConfig = Object.assign(config, {
+const srcPath = path.resolve(__dirname, 'src')
+const loginPath = path.resolve(srcPath, 'login')
+const profilePath = path.resolve(srcPath, 'profile')
+
+const loginConfig = Object.assign({}, config, {
   entry: loginPath,
   output: {path: loginPath, filename: 'index.min.js'}
 })
+const profileConfig = Object.assign({}, config, {
+  entry: profilePath,
+  output: {path: profilePath, filename: 'index.min.js'}
+})
 
-module.exports = [
-  loginConfig
-]
+module.exports = [profileConfig, loginConfig]
