@@ -5,6 +5,7 @@ const app = express()
 const PORT = +process.env.PORT || 3000
 
 app.use(express.static(path.resolve(__dirname, 'app')))
+app.use('/node_modules', express.static(path.resolve(__dirname, 'node_modules')))
 
 app.listen(PORT, () => {
   console.log(`Server started at "http://0.0.0.0:${PORT}/".`)

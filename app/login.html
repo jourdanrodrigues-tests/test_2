@@ -3,10 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="stylesheet" href="/login/index.css">
   <title>Interview Test</title>
+  <link rel="stylesheet" href="/login/index.css">
+  <script src="/login.js"></script>
 </head>
 <body>
-<script src="/login.js"></script>
+<div class="form">
+  <h1 class="form__h1">Login</h1>
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <input class="mdl-textfield__input" id="email">
+    <label class="mdl-textfield__label" for="email">EMAIL</label>
+  </div>
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <input class="mdl-textfield__input" type="password" id="password">
+    <label class="mdl-textfield__label" for="password">Password</label>
+  </div>
+  <div class="form__conditions">
+    <span>
+      By signing up or clicking continue, I confirm that I have read and agree to the
+      <a class="form__conditions__a">Terms</a> and
+      <a class="form__conditions__a">Privacy Policy</a>
+    </span>
+  </div>
+  <button class="mdl-button mdl-js-button mdl-button--colored">
+    LOGIN
+  </button>
+</div>
 </body>
 </html>
