@@ -22,4 +22,10 @@
   font-weight: 600 !important;
   margin-top: 1.3em !important;
   height: 3em !important;
+  @include for-mobile () {
+    position: absolute !important;
+    bottom: 0 !important;
+    margin-left: -2em !important;
+    border-radius: 0 !important;
+  }
 }
