@@ -21,8 +21,6 @@
     "webpack": "^3.2.0"
   },
   "scripts": {
-    "dev:webpack": "webpack --watch",
-    "dev:gulp": "gulp compile:css:watch",
     "prestart": "gulp compile:css && webpack",
     "start": "node .",
     "test": "echo \"Error: no test specified\" && exit 1"

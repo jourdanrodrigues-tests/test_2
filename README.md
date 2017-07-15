@@ -8,11 +8,7 @@ repository.
 ### Useful commands
 
 * `npm start`: Production server;
-* `npm test`: Run tests<sup>1</sup>;
-* Development server
-  * `npm dev:webpack`: Run WebPack (mainly for JS files);
-  * `npm dev:gulp`: Run Gulp (mainly for SCSS files);
-  * `npm start`: Start the static server.
+* `npm test`: Run tests<sup>1</sup>.
 
 _P.S._'s:
 1. Not implemented yet.
