@@ -4,8 +4,6 @@
 @import './mdl';
 
 body {
-  height: 100%;
-  width: 100%;
   @media #{$desktop_media_query} {
     overflow: hidden;
     background-image: url('/img/fullscreen_bg_image.jpg');
