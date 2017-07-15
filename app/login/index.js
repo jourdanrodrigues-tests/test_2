@@ -1,1 +1,1 @@
-import './index.scss'
+// Empty for now!
