@@ -1,7 +1,5 @@
 import path from 'path'
 
-const appPath = path.resolve(__dirname, 'app')
-
 const config = {
   module: {
     rules: [
@@ -11,7 +9,7 @@ const config = {
   }
 }
 
-const loginPath = path.resolve(appPath, 'login')
+const loginPath = path.resolve(__dirname, 'src', 'login')
 const loginConfig = Object.assign(config, {
   entry: loginPath,
   output: {path: loginPath, filename: 'index.min.js'}
