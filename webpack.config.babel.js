@@ -10,10 +10,6 @@ module.exports = {
     path: appPath,
     filename: '[name].js'
   },
-  devServer: {
-    contentBase: appPath,
-    hot: true
-  },
   module: {
     rules: [
       {
