@@ -9,3 +9,7 @@ gulp.task('compile:css', () =>
     .pipe(sass())
     .pipe(gulp.dest('app'))
 )
+
+gulp.task('compile:css:watch', ['compile:css'], () => {
+  gulp.watch(sassFiles, ['compile:css'])
+})
