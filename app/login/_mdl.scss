@@ -3,6 +3,9 @@
 
 .mdl-button, .mdl-textfield {
   width: 100% !important;
+  @media #{$phone_media_query} {
+    margin-top: 1em !important
+  }
 }
 
 .mdl-textfield {

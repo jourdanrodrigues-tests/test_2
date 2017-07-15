@@ -37,9 +37,14 @@ body {
   }
   &__conditions {
     color: $light_color;
-    text-align: center;
-    margin: auto 2em;
-    font-size: 9pt;
+    @media #{$desktop_media_query} {
+      text-align: center;
+      margin: auto 2em;
+      font-size: 9pt;
+    }
+    @media #{$phone_media_query} {
+      margin-top: 1em
+    }
     &__a {
       color: $primary_blue;
       font-size: inherit;
