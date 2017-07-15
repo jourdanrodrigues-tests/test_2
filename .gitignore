@@ -1,5 +1,5 @@
 # Files
-app/*.js
+*.min.js
 *.css
 .DS_Store
 

@@ -2,14 +2,7 @@ import path from 'path'
 
 const appPath = path.resolve(__dirname, 'app')
 
-module.exports = {
-  entry: {
-    login: path.resolve(appPath, 'login')
-  },
-  output: {
-    path: appPath,
-    filename: '[name].js'
-  },
+const config = {
   module: {
     rules: [
       {test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/},
@@ -17,3 +10,13 @@ module.exports = {
     ]
   }
 }
+
+const loginPath = path.resolve(appPath, 'login')
+const loginConfig = Object.assign(config, {
+  entry: loginPath,
+  output: {path: loginPath, filename: 'index.min.js'}
+})
+
+module.exports = [
+  loginConfig
+]
