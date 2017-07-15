@@ -1,6 +1,6 @@
 {
   "name": "interview-test",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A package for testing my skills in a hardcore way.",
   "dependencies": {
     "express": "^4.15.3",
