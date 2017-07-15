@@ -18,6 +18,11 @@ body {
   @media #{$desktop_media_query} {
     height: 100%;
     width: 100%;
+    max-height: 24em;
+    max-width: 26em;
+    margin: 10% auto auto auto;
+    border-radius: .1em;
+    box-shadow: 0 0 .4em #AAA;
   }
   &__h1 {
     text-align: center;
@@ -40,12 +45,5 @@ body {
       font-size: inherit;
       cursor: pointer;
     }
-  }
-  @media #{$desktop_media_query} {
-    max-height: 24em;
-    max-width: 26em;
-    margin: 10% auto auto auto;
-    border-radius: .1em;
-    box-shadow: 0 0 .4em #AAA;
   }
 }
