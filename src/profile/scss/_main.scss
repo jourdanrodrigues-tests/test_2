@@ -16,7 +16,25 @@ body {
     @include for-desktop () {
       display: inline-block;
       margin-left: 2em;
-      transform: translateY(-2em);
+      transform: translateY(3em);
+    }
+    &__location, &__phone {
+      color: #333;
+      &__icon {
+        vertical-align: middle;
+        color: #939699;
+        font-size: 17pt;
+        margin-right: .5em;
+        @include for-mobile () {
+          margin-left: 1em;
+        }
+      }
+    }
+    &__location {
+      margin-top: 1em;
+    }
+    &__phone {
+      margin-top: .5em;
     }
     &__name {
       color: #333;
