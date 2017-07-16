@@ -47,4 +47,34 @@ body {
       border: 1px solid $primary_blue !important;
     }
   }
+  &__image_wrapper {
+    overflow: hidden;
+    position: relative;
+    @include for-desktop () {
+      $square_size: 12em;
+      height: $square_size;
+      width: $square_size;
+      margin-bottom: 2em;
+      margin-left: 2em;
+      box-shadow: 0 0 1.5em #DDD;
+    }
+    @include for-mobile () {
+      $square_size: 9.5em;
+      height: $square_size;
+      width: $square_size;
+      box-shadow: 0 0 1.5em #BBB;
+      display: inline-block;
+      margin-top: 5em;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    &__img {
+      @include for-desktop () {
+        transform: translateX(-29%);
+      }
+      @include for-mobile () {
+        transform: translateX(-37%);
+      }
+    }
+  }
 }
