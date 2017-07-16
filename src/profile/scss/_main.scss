@@ -31,10 +31,20 @@ body {
       }
     }
     &__location {
-      margin-top: 1em;
+      @include for-desktop () {
+        margin-top: 1em;
+      }
+      @include for-mobile () {
+        margin-top: .5em;
+      }
     }
     &__phone {
-      margin-top: .5em;
+      @include for-desktop () {
+        margin-top: .5em;
+      }
+      @include for-mobile () {
+        margin-top: 1em;
+      }
     }
     &__name {
       color: #333;
