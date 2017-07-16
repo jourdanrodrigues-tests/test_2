@@ -4,7 +4,8 @@ const config = {
   module: {
     rules: [
       {test: /\.js$/, loader: 'babel-loader', exclude: /(node_modules|\.min\.js)/},
-      {test: /\.css$/, loader: 'style-loader!css-loader'}
+      {test: /\.css$/, loader: 'style-loader!css-loader'},
+      {test: /\.(png|woff2?|eot|ttf|svg)$/, loader: 'url-loader?limit=100000'}
     ]
   }
 }
