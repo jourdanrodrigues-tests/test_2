@@ -18,6 +18,9 @@ body {
       margin-left: 2em;
       transform: translateY(3em);
     }
+    $item_top_most: 1.3em;
+    $item_top_less: .5em;
+    $item_left_margin: 1em;
     &__location, &__phone {
       color: #333;
       font-size: 9pt;
@@ -27,26 +30,24 @@ body {
         font-size: 17pt;
         margin-right: .5em;
         @include for-mobile () {
-          margin-left: 1em;
+          margin-left: $item_left_margin;
         }
       }
     }
-    $top_most: 1.3em;
-    $top_less: .5em;
     &__location {
       @include for-desktop () {
-        margin-top: $top_most;
+        margin-top: $item_top_most;
       }
       @include for-mobile () {
-        margin-top: $top_less;
+        margin-top: $item_top_less;
       }
     }
     &__phone {
       @include for-desktop () {
-        margin-top: $top_less;
+        margin-top: $item_top_less;
       }
       @include for-mobile () {
-        margin-top: $top_most;
+        margin-top: $item_top_most;
       }
     }
     &__name {
@@ -59,6 +60,26 @@ body {
         font-size: 16pt;
         text-align: center;
         margin-top: 1em;
+      }
+    }
+    &__evaluation {
+      color: #727E88;
+      @include for-desktop () {
+        position: absolute;
+        transform: translate(41em, -6em);
+      }
+      @include for-mobile () {
+        margin-top: $item_top_less;
+        margin-left: $item_left_margin + .6em;
+      }
+      &__icon {
+        float: left;
+        font-size: 17pt;
+        margin-right: .2em;
+        @include for-mobile () {
+          font-size: 21pt;
+          color: $primary_blue;
+        }
       }
     }
   }
