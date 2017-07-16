@@ -20,6 +20,7 @@ body {
     }
     &__location, &__phone {
       color: #333;
+      font-size: 9pt;
       &__icon {
         vertical-align: middle;
         color: #939699;
@@ -30,31 +31,32 @@ body {
         }
       }
     }
+    $top_most: 1.3em;
+    $top_less: .5em;
     &__location {
       @include for-desktop () {
-        margin-top: 1em;
+        margin-top: $top_most;
       }
       @include for-mobile () {
-        margin-top: .5em;
+        margin-top: $top_less;
       }
     }
     &__phone {
       @include for-desktop () {
-        margin-top: .5em;
+        margin-top: $top_less;
       }
       @include for-mobile () {
-        margin-top: 1em;
+        margin-top: $top_most;
       }
     }
     &__name {
       color: #333;
+      font-weight: 600;
       @include for-desktop () {
         font-size: 14pt;
-        font-weight: 600;
       }
       @include for-mobile () {
         font-size: 16pt;
-        font-weight: bold;
         text-align: center;
         margin-top: 1em;
       }
@@ -88,12 +90,15 @@ body {
     margin-top: 1em;
     margin-right: 1em;
     float: right;
-    font-weight: 600;
     @include for-desktop () {
+      font-weight: 600;
       padding-left: 1.7em !important;
       padding-right: 1.7em !important;
       border-radius: $button_border_radius !important;
       border: 1px solid $primary_blue !important;
+    }
+    @include for-mobile () {
+      font-weight: bold;
     }
   }
   &__image_wrapper {
