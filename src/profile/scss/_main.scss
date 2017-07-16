@@ -1,0 +1,26 @@
+@import "../../scss/common";
+
+body {
+  background-color: #F5F7F9;
+}
+
+.header {
+  @include for-desktop () {
+    background-color: #FFF;
+    min-height: 22em;
+    margin: 4em auto 2em auto;
+    width: 80%
+  }
+  &__logout.mdl-button { // This is a "mdl-button", so !important everywhere
+    color: $primary_blue !important;
+    background-color: transparent !important;
+    margin-top: 1em;
+    margin-right: 1em;
+    float: right;
+    font-weight: 600;
+    @include for-desktop () {
+      border-radius: .3em !important;
+      border: 1px solid $primary_blue !important;
+    }
+  }
+}
