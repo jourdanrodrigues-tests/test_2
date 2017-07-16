@@ -1,4 +1,5 @@
-@import "../../scss/common";
+@import '../../scss/common';
+@import './vars';
 
 body {
   background-color: #F5F7F9;
@@ -9,9 +10,30 @@ body {
     background-color: #FFF;
     min-height: 22em;
     margin: 4em auto 2em auto;
-    width: 80%
+    width: 80%;
   }
-  &__logout.mdl-button { // This is a "mdl-button", so !important everywhere
+  &__cover_image_uploader {
+    $common_color: #D0DCE7;
+    &.mdl-button {
+      border: 1px solid $common_color !important;
+      border-radius: $button_border_radius !important;
+      color: #727E88 !important;
+      text-transform: initial !important;
+      margin-top: 3em;
+      left: 50%;
+      transform: translateX(-50%);
+      @include for-mobile () {
+        display: none !important;
+      }
+    }
+    &__icon {
+      vertical-align: middle;
+      color: $common_color !important;
+      font-size: 17pt !important;
+      margin-right: .7em !important;
+    }
+  }
+  &__logout.mdl-button {
     color: $primary_blue !important;
     background-color: transparent !important;
     margin-top: 1em;
@@ -19,7 +41,7 @@ body {
     float: right;
     font-weight: 600;
     @include for-desktop () {
-      border-radius: .3em !important;
+      border-radius: $button_border_radius !important;
       border: 1px solid $primary_blue !important;
     }
   }

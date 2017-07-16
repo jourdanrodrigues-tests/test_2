@@ -4,6 +4,7 @@
   "description": "A package for testing my skills in a hardcore way.",
   "dependencies": {
     "express": "^4.15.3",
+    "ionicons": "^3.0.0",
     "material-design-lite": "^1.3.0"
   },
   "devDependencies": {
