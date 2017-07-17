@@ -18,7 +18,7 @@ const paths = ['login', 'profile'].map((dir) => path.resolve(__dirname, 'src', d
 let entries = []
 
 if (!+process.env.PRODUCTION) {
-  entries.push('webpack-hot-middleware/client')
+  entries.concat(['webpack-hot-middleware/client', 'webpack/hot/dev-server'])
   config.plugins = [
     new webpack.optimize.OccurrenceOrderPlugin(), // Needed for webpack 1.x only
     new webpack.HotModuleReplacementPlugin(),
