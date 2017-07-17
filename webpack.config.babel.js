@@ -23,9 +23,9 @@ let entries = []
 if (!+process.env.PRODUCTION) {
   entries.push('webpack-hot-middleware/client')
   config.plugins = [
-    new webpack.optimize.OccurenceOrderPlugin(), // Needed for webpack 1.x only
+    new webpack.optimize.OccurrenceOrderPlugin(), // Needed for webpack 1.x only
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin()
+    new webpack.NoEmitOnErrorsPlugin()
   ]
 }
 
