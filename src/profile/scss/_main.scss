@@ -65,8 +65,7 @@ body {
     &__evaluation {
       color: #727E88;
       @include for-desktop () {
-        position: absolute;
-        transform: translate(41em, -6em);
+        transform: translate(40em, -6.14em);
       }
       @include for-mobile () {
         margin-top: $item_top_less;
