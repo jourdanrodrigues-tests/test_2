@@ -12,9 +12,6 @@ body {
     margin: 4em auto 2em auto;
     width: 80%;
   }
-  $item_top_most: 1.3em;
-  $item_top_less: .5em;
-  $item_left_margin: 1em;
   &__info {
     @include for-desktop () {
       display: inline-block;
@@ -30,24 +27,24 @@ body {
         font-size: 17pt;
         margin-right: .5em;
         @include for-mobile () {
-          margin-left: $item_left_margin;
+          margin-left: $profile_item_left_margin;
         }
       }
     }
     &__location {
       @include for-desktop () {
-        margin-top: $item_top_most;
+        margin-top: $profile_item_top_most;
       }
       @include for-mobile () {
-        margin-top: $item_top_less;
+        margin-top: $profile_item_top;
       }
     }
     &__phone {
       @include for-desktop () {
-        margin-top: $item_top_less;
+        margin-top: $profile_item_top;
       }
       @include for-mobile () {
-        margin-top: $item_top_most;
+        margin-top: $profile_item_top_most;
       }
     }
     &__name {
@@ -70,8 +67,8 @@ body {
       transform: translateY(9.33em);
     }
     @include for-mobile () {
-      margin-top: $item_top_less;
-      margin-left: $item_left_margin + .6em;
+      margin-top: $profile_item_top;
+      margin-left: $profile_item_left_margin + .6em;
     }
     &__icon {
       float: left;
