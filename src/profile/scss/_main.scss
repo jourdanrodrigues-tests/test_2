@@ -12,15 +12,15 @@ body {
     margin: 4em auto 2em auto;
     width: 80%;
   }
+  $item_top_most: 1.3em;
+  $item_top_less: .5em;
+  $item_left_margin: 1em;
   &__info {
     @include for-desktop () {
       display: inline-block;
       margin-left: 2em;
       transform: translateY(3em);
     }
-    $item_top_most: 1.3em;
-    $item_top_less: .5em;
-    $item_left_margin: 1em;
     &__location, &__phone {
       color: #333;
       font-size: 9pt;
@@ -62,23 +62,24 @@ body {
         margin-top: 1em;
       }
     }
-    &__evaluation {
-      color: #727E88;
-      @include for-desktop () {
-        transform: translate(40em, -6.14em);
-      }
+  }
+  &__evaluation {
+    color: #727E88;
+    @include for-desktop () {
+      display: inline-block;
+      transform: translate(30em, -1em);
+    }
+    @include for-mobile () {
+      margin-top: $item_top_less;
+      margin-left: $item_left_margin + .6em;
+    }
+    &__icon {
+      float: left;
+      font-size: 17pt;
+      margin-right: .2em;
       @include for-mobile () {
-        margin-top: $item_top_less;
-        margin-left: $item_left_margin + .6em;
-      }
-      &__icon {
-        float: left;
-        font-size: 17pt;
-        margin-right: .2em;
-        @include for-mobile () {
-          font-size: 21pt;
-          color: $primary_blue;
-        }
+        font-size: 21pt;
+        color: $primary_blue;
       }
     }
   }
