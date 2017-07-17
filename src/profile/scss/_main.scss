@@ -15,7 +15,7 @@ body {
   &__info {
     @include for-desktop () {
       display: inline-block;
-      margin-left: 2em;
+      margin-left: 1.5em;
       transform: translateY(3em);
     }
     &__location, &__phone {
@@ -61,10 +61,10 @@ body {
     }
   }
   &__evaluation {
-    color: #727E88;
+    $desktop_color: #727E88;
     @include for-desktop () {
       float: right;
-      transform: translateY(9.33em);
+      transform: translate(7.5em, 9.33em);
     }
     @include for-mobile () {
       margin-top: $profile_item_top;
@@ -72,11 +72,39 @@ body {
     }
     &__icon {
       float: left;
-      font-size: 17pt;
       margin-right: .2em;
+      @include for-desktop () {
+        font-size: 17pt;
+        color: $desktop_color;
+      }
       @include for-mobile () {
         font-size: 21pt;
         color: $primary_blue;
+      }
+    }
+    &__reviews {
+      @include for-desktop () {
+        color: $desktop_color;
+        float: right;
+        margin-left: 3em;
+        margin-top: .15em;
+        font-size: 9pt;
+      }
+      @include for-mobile () {
+        clear: both;
+        transform: translateY($profile_item_top);
+      }
+      &__count {
+        @include for-desktop () {
+          margin-right: 1.5em;
+          font-size: 10pt;
+          vertical-align: center;
+        }
+        @include for-mobile () {
+          margin-right: 1em;
+          font-size: 12pt;
+          font-weight: 600;
+        }
       }
     }
   }
@@ -105,8 +133,8 @@ body {
   &__logout.mdl-button {
     color: $primary_blue !important;
     background-color: transparent !important;
-    margin-top: 1em;
-    margin-right: 1em;
+    margin-top: 1.5em;
+    margin-right: 1.5em;
     float: right;
     @include for-desktop () {
       font-weight: 600;
