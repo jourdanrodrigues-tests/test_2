@@ -1,4 +1,5 @@
 # Files
+/.env
 *.eot
 *.min.js
 *.css

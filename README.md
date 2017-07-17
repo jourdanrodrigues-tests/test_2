@@ -7,8 +7,22 @@ repository.
 
 ### Useful commands
 
-* `npm start`: Production server;
-* `npm test`: Run tests<sup>1</sup>.
+* `npm start`: Runs the application in production mode;
+* `npm test`: Run tests*.
+
+### Development
+
+* Create a `.env` file;
+* Specify `PRODUCTION=0` (which is the default) on it;
+* Run `npm start`;
+* Start coding like if there's no coffee tomorrow.
+
+### "Production"
+
+* Clone this repository;
+* Run `npm start`;
+* Be amazed.
 
 _P.S._'s:
-1. Not implemented yet.
+
+\* Not implemented yet.
