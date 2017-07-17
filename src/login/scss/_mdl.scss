@@ -1,0 +1,31 @@
+@import '../../scss/common';
+@import 'vars';
+
+.mdl-button, .mdl-textfield {
+  width: 100% !important;
+  @include for-mobile() {
+    margin-top: 1em !important
+  }
+}
+
+.mdl-textfield {
+  &__input {
+    border-bottom-color: $light_color !important;
+  }
+  &__label {
+    color: $light_color !important;
+  }
+}
+.mdl-button {
+  background-color: $primary_blue !important;
+  color: #FFF !important;
+  font-weight: 600 !important;
+  margin-top: 1.3em !important;
+  height: 3em !important;
+  @include for-mobile () {
+    position: absolute !important;
+    bottom: 0 !important;
+    margin-left: -3em !important;
+    border-radius: 0 !important;
+  }
+}

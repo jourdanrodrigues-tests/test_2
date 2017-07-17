@@ -1,0 +1,26 @@
+@import 'font';
+@import 'mixins';
+@import 'vars';
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  font-family: 'Open Sans', sans-serif !important;
+}
+
+.for-desktop {
+  @include for-mobile () {
+    display: none;
+  }
+}
+
+.for-mobile {
+  @include for-desktop () {
+    display: none;
+  }
+}

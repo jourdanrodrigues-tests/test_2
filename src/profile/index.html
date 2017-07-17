@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+  <title>Profile - Interview Test</title>
+  <script src="index.min.js"></script>
+</head>
+<body>
+<div class="profile">
+  <button class="mdl-button mdl-js-button profile__logout" onclick="logout()">
+    <span class="for-desktop">Log Out</span>
+    <span class="for-mobile">Logout</span>
+  </button>
+  <button class="mdl-button mdl-js-button profile__cover_image_uploader">
+    <i class="icon ion-ios-camera profile__cover_image_uploader__icon"></i>Upload Cover Image
+  </button>
+  <div class="profile__image_wrapper">
+    <img src="/img/profile_image.jpg" class="profile__image_wrapper__img"/>
+  </div>
+  <div class="profile__info">
+    <div class="profile__info__name">Jessica Parker</div>
+    <div class="profile__info__location for-desktop">
+      <i class="icon ion-ios-pin-outline profile__info__location__icon"></i>Newport Beach, CA
+    </div>
+    <div class="profile__info__phone">
+      <i class="icon ion-ios-call-outline profile__info__phone__icon"></i>(949) 325 - 68594
+    </div>
+    <div class="profile__info__location for-mobile">
+      <i class="icon ion-ios-pin-outline profile__info__location__icon"></i>Newport Beach, CA
+    </div>
+  </div>
+  <div class="profile__evaluation">
+    <div class="icon ion-md-star profile__evaluation__icon"></div>
+    <div class="icon ion-md-star profile__evaluation__icon"></div>
+    <div class="icon ion-md-star profile__evaluation__icon"></div>
+    <div class="icon ion-md-star profile__evaluation__icon"></div>
+    <div class="icon ion-md-star-outline profile__evaluation__icon"></div>
+    <div class="profile__evaluation__reviews">
+      <span class="profile__evaluation__reviews__count">6</span>Reviews
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,7 +1,11 @@
 # Files
-app/*.js
+/.env
+*.eot
+*.min.js
 *.css
 .DS_Store
+*svg
+*.ttf
 
 # Directories
 /.idea/
