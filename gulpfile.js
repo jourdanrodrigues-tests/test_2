@@ -12,6 +12,8 @@ gulp.task('compile:css', () =>
     .pipe(gulp.dest('src'))
 )
 
-gulp.task('compile:css:watch', ['compile:css'], () => {
+gulp.task('compile', ['compile:css']) // Imagine you would split compilation in JS and HTML as well
+
+gulp.task('watch', ['compile'], () => {
   gulp.watch(sassFiles, ['compile:css'])
 })

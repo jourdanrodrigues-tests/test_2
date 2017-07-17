@@ -9,8 +9,16 @@ if (!+process.env.PRODUCTION) {
   const webpackDevMiddleware = require('webpack-dev-middleware')
   const webpackHotMiddleware = require('webpack-hot-middleware')
 
+  const gulp = require('gulp')
+  require('./gulpfile')
+
   app.use(webpackDevMiddleware(webpackCompiler, {noInfo: true}))
   app.use(webpackHotMiddleware(webpackCompiler))
+
+  process.nextTick(() => {
+    // Solution source: https://github.com/gulpjs/gulp/issues/770#issuecomment-63106755
+    gulp.start('watch')
+  })
 }
 
 const PORT = +process.env.PORT || 3000
