@@ -65,6 +65,9 @@ body {
     @include for-desktop () {
       float: right;
       transform: translate(7.5em, 9.33em);
+      @media (max-width: 871px) { // Resizing fix
+        transform: translate(-1.5em, -3.33em);
+      }
     }
     @include for-mobile () {
       margin-top: $profile_item_top;
