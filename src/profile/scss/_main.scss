@@ -64,7 +64,7 @@ body {
     $desktop_color: #727E88;
     @include for-desktop () {
       float: right;
-      transform: translate(7.5em, 9.33em);
+      transform: translate(7.97em, 9.33em);
       @media (max-width: 871px) { // Resizing fix
         transform: translate(-1.5em, -3.33em);
       }
@@ -91,22 +91,22 @@ body {
         float: right;
         margin-left: 3em;
         margin-top: .15em;
-        font-size: 9pt;
+        font-size: 10pt;
       }
       @include for-mobile () {
         clear: both;
         transform: translateY($profile_item_top);
       }
       &__count {
+        font-weight: 600;
         @include for-desktop () {
           margin-right: 1.5em;
-          font-size: 10pt;
+          font-size: 11pt;
           vertical-align: center;
         }
         @include for-mobile () {
           margin-right: 1em;
           font-size: 12pt;
-          font-weight: 600;
         }
       }
     }
