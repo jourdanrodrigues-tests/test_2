@@ -1,4 +1,7 @@
 import path from 'path'
+/**
+ * @type {{optimize: {OccurrenceOrderPlugin}, HotModuleReplacementPlugin, NoEmitOnErrorsPlugin}}
+ */
 import webpack from 'webpack'
 import {config as dotenvConfig} from 'dotenv'
 
