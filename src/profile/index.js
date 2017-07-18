@@ -6,6 +6,7 @@ import 'material-design-lite'
 
 import './js/tabs'
 import './js/firefox'
+import './js/popover'
 
 window.logout = () => {
   window.location.href = '/login/'

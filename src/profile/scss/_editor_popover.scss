@@ -9,6 +9,8 @@
   z-index: 9999;
   box-shadow: 0 0 3em #BBB;
   transform: translateX(3em);
+  background-color: #FFF;
+  transition: .4s;
   &::after {
     content: '';
     width: 0;
