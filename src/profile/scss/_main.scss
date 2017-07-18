@@ -11,6 +11,8 @@ body {
     min-height: 19.8em;
     margin: 4em auto 2em auto;
     width: 80%;
+    position:relative;
+    z-index: 0;
   }
   &__info {
     @include for-desktop () {
@@ -19,7 +21,7 @@ body {
       transform: translateY(3em);
     }
     &__location, &__phone {
-      color: #333;
+      color: $primary_text_color;
       font-size: 9pt;
       &__icon {
         vertical-align: middle;
@@ -48,7 +50,7 @@ body {
       }
     }
     &__name {
-      color: #333;
+      color: $primary_text_color;
       font-weight: 600;
       @include for-desktop () {
         font-size: 14pt;
@@ -119,9 +121,8 @@ body {
       color: #727E88 !important;
       text-transform: initial !important;
       position: absolute;
-      margin-top: 5em;
       left: 50%;
-      transform: translateX(-50%);
+      transform: translate(-50%, 5em);
       @include for-mobile () {
         display: none !important;
       }
