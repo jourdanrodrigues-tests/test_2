@@ -52,6 +52,7 @@
       padding: .19em .7em;
       font-size: 12pt;
       color: #727D88;
+      cursor: pointer;
       @include for-mobile () {
         display: none;
       }
