@@ -21,8 +21,14 @@
     border-bottom: $border;
   }
   &__h1 {
-    margin-top: 1.5em;
-    margin-left: 1.5em;
+    @include for-desktop () {
+      margin-top: 1.5em;
+      margin-left: 1.5em;
+    }
+    @include for-mobile () {
+      margin-top: 1em;
+      margin-left: 1.2em;
+    }
     color: lighten($primary_text_color, 20%);
     font-size: 17pt;
   }

@@ -4,11 +4,16 @@
   &__field {
     margin-bottom: .3em;
     &__content {
+      color: $primary_text_color;
       display: inline-block;
       @include for-desktop () {
         margin-left: 1.5em;
         padding: .3em .4em;
         background-color: #F5F7F7;
+      }
+      @include for-mobile () {
+        margin-left: 1.7em;
+        font-size: 13pt;
       }
     }
     &__edit_box {
