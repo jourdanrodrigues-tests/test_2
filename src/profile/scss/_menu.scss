@@ -41,6 +41,13 @@
       margin-right: 1em;
       text-transform: uppercase;
       cursor: pointer;
+      &--active::after {
+        content: '';
+        height: .3em;
+        display: block;
+        background-color: #018DFD;
+        transform: translateY(.5em)
+      }
     }
   }
 }
