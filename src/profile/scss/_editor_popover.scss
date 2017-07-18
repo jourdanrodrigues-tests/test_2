@@ -1,0 +1,48 @@
+@import '../../scss/common';
+
+.editor__popover {
+  display: none;
+  padding: .4em 1em .7em 1em;
+  height: 8em;
+  width: 18em;
+  position: absolute;
+  z-index: 9999;
+  box-shadow: 0 0 3em #BBB;
+  transform: translateX(3em);
+  &::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    $triangle_side: 1em;
+    $triangle_base: $triangle_side + .3em;
+    border-width: $triangle_side $triangle_base $triangle_side 0;
+    border-color: transparent #FFF transparent transparent;
+    position: absolute;
+    top: 10%;
+    transform: translateX(-$triangle_base - 18.7em);
+  }
+  &__field {
+    &__input {
+      border-bottom-color: $light_color !important;
+    }
+    &__label {
+      color: $light_color !important;
+    }
+  }
+  &__button {
+    border: 1px solid $primary_blue !important;
+    background-color: $primary_blue !important;
+    $side: 2.5em;
+    padding-left: $side;
+    padding-right: $side;
+    margin-right: 2em;
+    font-size: 9pt !important;
+    color: #FFF !important;
+    border-radius: .1em !important;
+    &--outline {
+      background-color: transparent !important;
+      color: $primary_blue !important;
+    }
+  }
+}
