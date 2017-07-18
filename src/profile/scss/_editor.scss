@@ -1,0 +1,20 @@
+@import '../../scss/common';
+@import './vars';
+
+.editor {
+  background-color: #FFF;
+  box-shadow: 0 0 .5em $box_shadow_color;
+  overflow: auto; // "div vs h1's margin": https://stackoverflow.com/a/6930055/4694834
+  @include for-desktop () {
+    width: 80%;
+    margin: auto;
+    border-radius: .1em;
+    transform: translateX(.2em);
+  }
+  &__h1 {
+    margin-top: 1.5em;
+    margin-left: 1.5em;
+    color: lighten($primary_text_color, 20%);
+    font-size: 17pt;
+  }
+}

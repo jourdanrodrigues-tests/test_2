@@ -1,16 +1,16 @@
 @import '../../scss/common';
+@import './vars';
 
 .profile__menu {
   background-color: white;
   height: 3.5em;
-  $box_shadow_color: #DDD;
   @include for-desktop () {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     z-index: -1;
-    box-shadow: 0 .2em .8em 0 $box_shadow_color;
+    box-shadow: 0 .1em .5em 0 $box_shadow_color;
   }
   @include for-mobile () {
     // TODO: Found out a way to hide scroll on Firefox
