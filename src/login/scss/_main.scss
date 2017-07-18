@@ -43,8 +43,10 @@ body {
     @include for-mobile() {
       margin-top: 1em
     }
-    &__a {
+    &__blue_dot, &__a {
       color: $primary_blue;
+    }
+    &__a {
       font-size: inherit;
       cursor: pointer;
     }
