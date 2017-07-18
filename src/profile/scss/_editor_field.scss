@@ -3,6 +3,9 @@
 .editor {
   &__field {
     margin-bottom: .3em;
+    &__content, &__edit_box {
+      vertical-align: middle;
+    }
     &__content {
       color: $primary_text_color;
       display: inline-block;
@@ -18,13 +21,14 @@
     }
     &__edit_box {
       background-color: #ECF0F5;
-      padding: .4em .8em;
-      font-size: 10pt;
+      padding: .23em .7em;
+      font-size: 12pt;
+      color: #727D88;
       @include for-mobile () {
         display: none;
       }
       &--firefox {
-        font-size: 9.5pt;
+        padding: .2em .6em;
       }
     }
     &--bold {
