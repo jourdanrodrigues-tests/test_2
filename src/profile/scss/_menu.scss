@@ -1,0 +1,45 @@
+@import '../../scss/common';
+
+.profile__menu {
+  transform: translateY(3.64em);
+  background-color: white;
+  height: 3.5em;
+  position: relative;
+  z-index: -1;
+  $box_shadow_color: #DCE5EA;
+  @include for-desktop () {
+    box-shadow: 0 0.2em 0.6em 0.1em $box_shadow_color;
+  }
+  @include for-mobile () {
+    // TODO: Found out a way to hide scroll on Firefox
+    box-shadow: 0 0 0.7em darken($box_shadow_color, 20%);
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  &__tabs {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    display: inline-block;
+    height: 100%;
+    white-space: nowrap;
+    @include for-mobile () {
+      transform: translateX(1.5em);
+    }
+    @include for-desktop () {
+      transform: translateX(15.1em);
+    }
+    &__item {
+      top: 50%;
+      color: $primary_text_color;
+      transform: translateY(50%);
+      vertical-align: middle;
+      display: inline-block;
+      margin-right: 1em;
+      text-transform: uppercase;
+    }
+  }
+}
