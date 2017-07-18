@@ -1,0 +1,20 @@
+@import '../../scss/common';
+@import './vars';
+
+.profile__logout.mdl-button {
+  color: $primary_blue !important;
+  background-color: transparent !important;
+  margin-top: 1.5em;
+  margin-right: 1.5em;
+  float: right;
+  @include for-desktop () {
+    font-weight: 600;
+    padding-left: 1.7em !important;
+    padding-right: 1.7em !important;
+    border-radius: $button_border_radius !important;
+    border: 1px solid $primary_blue !important;
+  }
+  @include for-mobile () {
+    font-weight: bold;
+  }
+}

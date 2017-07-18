@@ -1,0 +1,53 @@
+@import '../../scss/common';
+@import './vars';
+
+.profile__evaluation {
+  $desktop_color: #727E88;
+  @include for-desktop () {
+    float: right;
+    transform: translate(7.97em, 9.33em);
+    @media (max-width: 871px) { // Resizing fix
+      transform: translate(-1.5em, -3.33em);
+    }
+  }
+  @include for-mobile () {
+    margin-top: $profile_item_top;
+    margin-left: $profile_item_left_margin + .6em;
+  }
+  &__icon {
+    float: left;
+    margin-right: .2em;
+    @include for-desktop () {
+      font-size: 17pt;
+      color: $desktop_color;
+    }
+    @include for-mobile () {
+      font-size: 21pt;
+      color: $primary_blue;
+    }
+  }
+  &__reviews {
+    font-size: 10pt;
+    @include for-desktop () {
+      color: $desktop_color;
+      float: right;
+      margin-left: 3em;
+      margin-top: .15em;
+    }
+    @include for-mobile () {
+      clear: both;
+      transform: translateY($profile_item_top);
+    }
+    &__count {
+      font-weight: 600;
+      font-size: 11pt;
+      @include for-desktop () {
+        margin-right: 1.5em;
+        vertical-align: center;
+      }
+      @include for-mobile () {
+        margin-right: 1em;
+      }
+    }
+  }
+}

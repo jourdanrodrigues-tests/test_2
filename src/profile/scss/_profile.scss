@@ -1,0 +1,17 @@
+@import '../../scss/common';
+@import './vars';
+
+body {
+  background-color: #F5F7F9;
+}
+
+.profile {
+  @include for-desktop () {
+    background-color: #FFF;
+    min-height: 19.8em;
+    margin: 4em auto 2em auto;
+    width: 80%;
+    position:relative;
+    z-index: 0;
+  }
+}

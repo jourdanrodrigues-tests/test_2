@@ -1,0 +1,24 @@
+@import '../../scss/common';
+@import './vars';
+
+.profile__cover_image_uploader {
+  $common_color: #D0DCE7;
+  &.mdl-button {
+    border: 1px solid $common_color !important;
+    border-radius: $button_border_radius !important;
+    color: #727E88 !important;
+    text-transform: initial !important;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 5em);
+    @include for-mobile () {
+      display: none !important;
+    }
+  }
+  &__icon {
+    vertical-align: middle;
+    color: $common_color !important;
+    font-size: 17pt !important;
+    margin-right: .7em !important;
+  }
+}
