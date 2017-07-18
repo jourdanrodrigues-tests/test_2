@@ -35,6 +35,7 @@
       margin-top: .15em;
     }
     @include for-mobile () {
+      color: $primary_text_color;
       clear: both;
       transform: translateY($profile_item_top);
     }
