@@ -1,0 +1,42 @@
+@import '../../scss/common';
+
+.profile__followers {
+  color: $primary_text_color;
+  font-size: 10pt;
+  @include for-desktop () {
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    transform: translate(-2em, -.8em);
+  }
+  @include for-mobile () {
+    margin-left: 1.5em;
+    transform: translateY(2em);
+  }
+  $desktop_text_color: #A6B0B7;
+  &__icon, &__count, &__label {
+    vertical-align: middle;
+  }
+  &__label {
+    @include for-desktop () {
+      color: $desktop_text_color;
+    }
+  }
+  &__icon {
+    font-size: 20pt;
+    @include for-desktop () {
+      color: $desktop_text_color;
+    }
+    @include for-mobile () {
+      color: #A5AFB7;
+    }
+  }
+  &__count {
+    margin: auto .4em;
+    font-size: 11pt;
+    font-weight: 600;
+    @include for-desktop () {
+      color: $primary_text_color;
+    }
+  }
+}
