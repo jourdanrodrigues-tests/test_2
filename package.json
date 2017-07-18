@@ -1,6 +1,6 @@
 {
   "name": "interview-test",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "A package for testing my skills in a hardcore way.",
   "dependencies": {
     "dotenv": "^4.0.0",
