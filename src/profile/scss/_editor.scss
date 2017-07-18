@@ -20,6 +20,15 @@
     //noinspection CssOptimizeSimilarProperties
     border-bottom: $border;
   }
+  &__edit_box {
+    position: absolute;
+    right: 1.5em;
+    top: 1.5em;
+    background-color: #ECF0F5;
+    padding: .23em .7em;
+    font-size: 12pt;
+    color: #727D88;
+  }
   &__h1 {
     @include for-desktop () {
       margin-top: 1.5em;
