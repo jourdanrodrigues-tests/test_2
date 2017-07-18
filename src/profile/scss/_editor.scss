@@ -4,10 +4,10 @@
 .editor {
   background-color: #FFF;
   overflow: auto; // "div vs h1's margin": https://stackoverflow.com/a/6930055/4694834
+  margin: auto auto 3em auto;
   @include for-desktop () {
     width: 80%;
     height: 30em;
-    margin: auto auto 3em auto;
     border-radius: .1em;
     transform: translateX(.2em);
     box-shadow: 0 0 .5em $box_shadow_color;
