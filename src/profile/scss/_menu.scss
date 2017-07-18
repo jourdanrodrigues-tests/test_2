@@ -4,10 +4,10 @@
   transform: translateY(3.64em);
   background-color: white;
   height: 3.5em;
-  position: relative;
-  z-index: -1;
   $box_shadow_color: #DCE5EA;
   @include for-desktop () {
+    position: relative;
+    z-index: -1;
     box-shadow: 0 0.2em 0.6em 0.1em $box_shadow_color;
   }
   @include for-mobile () {
