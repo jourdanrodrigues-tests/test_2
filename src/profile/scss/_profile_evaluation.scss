@@ -1,0 +1,54 @@
+@import '../../scss/common';
+@import './vars';
+
+.profile__evaluation {
+  $desktop_color: #727E88;
+  @include for-desktop () {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-right: 1.5em;
+    transform: translateY(-8.8em);
+  }
+  @include for-mobile () {
+    margin-top: $profile_item_top;
+    margin-left: $profile_item_left_margin + .6em;
+  }
+  &__icon {
+    float: left;
+    margin-right: .2em;
+    @include for-desktop () {
+      font-size: 17pt;
+      color: $desktop_color;
+    }
+    @include for-mobile () {
+      font-size: 21pt;
+      color: $primary_blue;
+    }
+  }
+  &__reviews {
+    font-size: 10pt;
+    @include for-desktop () {
+      color: $desktop_color;
+      float: right;
+      margin-left: 3em;
+      margin-top: .15em;
+    }
+    @include for-mobile () {
+      color: $primary_text_color;
+      clear: both;
+      transform: translateY($profile_item_top);
+    }
+    &__count {
+      font-weight: 600;
+      font-size: 11pt;
+      @include for-desktop () {
+        margin-right: 1.5em;
+        vertical-align: center;
+      }
+      @include for-mobile () {
+        margin-right: 1em;
+      }
+    }
+  }
+}

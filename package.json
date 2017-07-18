@@ -1,7 +1,11 @@
 {
   "name": "interview-test",
-  "version": "0.4.3",
+  "version": "0.5.0",
   "description": "A package for testing my skills in a hardcore way.",
+  "engines": {
+    "node": "8.1.4",
+    "npm": "5.0.3"
+  },
   "dependencies": {
     "dotenv": "^4.0.0",
     "express": "^4.15.3",

@@ -1,0 +1,56 @@
+@import '../../scss/common';
+@import './vars';
+
+.profile__info {
+  @include for-desktop () {
+    display: inline-block;
+    margin-left: 1.5em;
+    transform: translateY(3em);
+  }
+  &__location, &__phone {
+    color: $primary_text_color;
+    @include for-desktop () {
+      font-size: 9pt;
+    }
+    @include for-mobile () {
+      font-size: 10pt
+    }
+    &__icon {
+      vertical-align: middle;
+      color: #939699;
+      font-size: 17pt;
+      margin-right: .5em;
+      @include for-mobile () {
+        margin-left: $profile_item_left_margin;
+      }
+    }
+  }
+  &__location {
+    @include for-desktop () {
+      margin-top: $profile_item_top_most;
+    }
+    @include for-mobile () {
+      margin-top: $profile_item_top;
+    }
+  }
+  &__phone {
+    @include for-desktop () {
+      margin-top: $profile_item_top;
+    }
+    @include for-mobile () {
+      margin-top: $profile_item_top_most;
+    }
+  }
+  &__name {
+    color: $primary_text_color;
+    font-weight: 600;
+    @include for-desktop () {
+      font-size: 14pt;
+    }
+    @include for-mobile () {
+      font-size: 16pt;
+      text-align: center;
+      margin-top: 1em;
+    }
+  }
+}
