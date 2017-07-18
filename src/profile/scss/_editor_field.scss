@@ -1,0 +1,29 @@
+@import '../../scss/common';
+
+.editor {
+  &__field {
+    margin-bottom: .3em;
+    &__content {
+      display: inline-block;
+      @include for-desktop () {
+        margin-left: 1.5em;
+        padding: .3em .4em;
+        background-color: #F5F7F7;
+      }
+    }
+    &__edit_box {
+      background-color: #ECF0F5;
+      padding: .4em .8em;
+      font-size: 10pt;
+      @include for-mobile () {
+        display: none;
+      }
+      &--firefox {
+        font-size: 9.5pt;
+      }
+    }
+    &--bold {
+      font-weight: bold;
+    }
+  }
+}
