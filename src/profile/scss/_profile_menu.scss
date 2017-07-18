@@ -10,6 +10,7 @@
     left: 0;
     width: 100%;
     z-index: -1;
+    overflow-y: hidden;
     box-shadow: 0 .1em .5em 0 $box_shadow_color;
   }
   @include for-mobile () {
@@ -50,7 +51,7 @@
         height: .3em;
         display: block;
         background-color: #018DFD;
-        transform: translateY(.5em)
+        transform: translateY(.65em);
       }
     }
   }
