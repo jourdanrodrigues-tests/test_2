@@ -9,3 +9,9 @@
     @content;
   }
 }
+
+@mixin resizing-fix() {
+  @media (max-width: 871px) {
+    @content;
+  }
+}

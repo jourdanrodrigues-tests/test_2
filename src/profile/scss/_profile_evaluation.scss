@@ -6,7 +6,7 @@
   @include for-desktop () {
     float: right;
     transform: translate(7.97em, 9.33em);
-    @media (max-width: 871px) { // Resizing fix
+    @include resizing-fix () {
       transform: translate(-1.5em, -3.33em);
     }
   }
