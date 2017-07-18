@@ -56,11 +56,32 @@
 </div>
 <div class="editor">
   <h1 class="editor__h1">Profile info</h1>
+  <!-- The break with the "i" tag is necessary because it creates an additional (and pretty annoying) space
+   and, at least for now, I don'k know how to solve without this hack -->
   <span class="editor__field editor__field--bold">
-    <!-- The break with the "i" tag is necessary because it creates an additional (and pretty annoying) space
-     and, at least for now, I don'k know how to solve without this hack -->
-    <span class="editor__field__content">Jessica Parker</span><i
-    class="icon ion-md-create editor__field__edit_box" data-firefox-class="editor__field__edit_box"></i>
+    <span class="editor__field__content">
+      <span class="for-desktop">Jessica Parker</span>
+      <span class="for-mobile">John Doe</span>
+    </span><i
+    class="icon ion-md-create editor__field__edit_box editor__field__edit_box--fix-padding"
+    data-firefox-class="editor__field__edit_box"></i>
+  </span>
+  <h2 class="editor__business_label">Business</h2>
+  <span class="editor__field">
+    <span class="editor__field__content">
+      <i class="icon ion-md-globe editor__field__content__icon"></i>www.seller.com
+    </span><i class="icon ion-md-create editor__field__edit_box" data-firefox-class="editor__field__edit_box"></i>
+  </span>
+  <span class="editor__field">
+    <span class="editor__field__content">
+      <i class="icon ion-ios-call-outline editor__field__content__icon"></i>(949) 325 - 68594
+    </span><i class="icon ion-md-create editor__field__edit_box" data-firefox-class="editor__field__edit_box"></i>
+  </span>
+  <span class="editor__field">
+    <span class="editor__field__content">
+      <i class="icon ion-ios-home-outline editor__field__content__icon"></i>Newport Beach, CA
+    </span><i class="icon ion-md-create editor__field__edit_box editor__field__edit_box--fix-padding editor__field__edit_box--blue"
+              data-firefox-class="editor__field__edit_box"></i>
   </span>
 </div>
 </body>
