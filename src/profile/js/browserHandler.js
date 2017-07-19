@@ -7,9 +7,13 @@ if (!NodeList.prototype.forEach) {
 }
 
 docReady(() => {
-  if (browsers.firefox || browsers.ie) { // Same rules apply
+  if (browsers.firefox) {
     document.querySelectorAll('[data-browser-class]').forEach((item) => {
       item.className += ` ${item.getAttribute('data-browser-class')}--firefox`
+    })
+  } else if (browsers.ie) {
+    document.querySelectorAll('[data-browser-class]').forEach((item) => {
+      item.className += ` ${item.getAttribute('data-browser-class')}--ie`
     })
   } else if (browsers.safari) {
     document.querySelectorAll('[data-browser-class]').forEach((item) => {
