@@ -1,6 +1,6 @@
 {
   "name": "interview-test",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A package for testing my skills in a hardcore way.",
   "engines": {
     "node": "8.1.4",
