@@ -5,7 +5,7 @@ import './index.css'
 import 'material-design-lite'
 
 import './js/tabs'
-import './js/firefox'
+import './js/browserHandler'
 import './js/popover'
 import './js/edit_fields'
 
