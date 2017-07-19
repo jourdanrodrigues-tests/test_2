@@ -5,6 +5,7 @@
   background-color: #FFF;
   overflow: auto; // "div vs h1's margin": https://stackoverflow.com/a/6930055/4694834
   margin: auto auto 3em auto;
+  padding-bottom: 1em;
   @include for-desktop () {
     width: 80%;
     height: 30em;
