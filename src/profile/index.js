@@ -4,8 +4,8 @@ import './index.css'
 
 import 'material-design-lite'
 
-import './js/tabs'
 import './js/browserHandler'
+import './js/tabs'
 import './js/popover'
 import './js/edit_fields'
 
