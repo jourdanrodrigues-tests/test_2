@@ -1,0 +1,19 @@
+@import '../../scss/common';
+
+.editor {
+  &__button {
+    display: none !important;
+    position: absolute !important;
+    right: 0;
+    top: 0;
+    color: $primary_blue;
+    $translateY: 1.7em;
+    $translateX: 6em;
+    &[data-for=cancel] {
+      transform: translate(-$translateX, $translateY) !important;
+    }
+    &[data-for=save] {
+      transform: translate(-$translateX + 5em, $translateY) !important;
+    }
+  }
+}
