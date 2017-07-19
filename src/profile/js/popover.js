@@ -1,23 +1,27 @@
 import '../../js/docReady'
+import browsers from '../../js/browserFlags'
 
 docReady(() => {
   document.querySelectorAll('.editor__field__edit_box').forEach((item) => {
     item.addEventListener('click', (event) => {
+      // As @sergio_caelum correctly pointed out, none of this will be draw on the screen till the end of the code
       let parent = event.target.parentElement
       let content = parent.querySelector('.editor__field__content')
       let contentValue = content.innerHTML.replace(/(<i.+i>|^\s+|\s+$)/g, '')
 
       let popover = document.querySelector('.editor__popover')
-      // As @sergio_caelum correctly pointed out, none of this will be "draw" on the screen till the end of the code
+
       let left = 10
       let top = 218
-      if (navigator.userAgent.indexOf('Safari') > 0) {
-        left -= 110
-        top += 361
+      if (browsers.safari) {
+        left = -110
+        top = 580
+      } else if (browsers.firefox) {
+        top = 225
+      } else if (browsers.ie) {
+        top = 221
       }
-      if (navigator.userAgent.indexOf('Firefox') > 0) {
-        top += 7
-      }
+
       popover.style.transform = `translate(${event.target.offsetLeft + left}px, ${event.target.offsetTop - top}px)`
       popover.style.display = 'block'
 

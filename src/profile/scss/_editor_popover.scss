@@ -17,8 +17,11 @@
   $position_x_adjustment: 18.5em;
   &--firefox {
     width: $width + 2em;
+  }
+  &--ie {
+    width: $width + 2em;
     &::after {
-      transform: translateX(-$triangle_base - $position_x_adjustment - .6em) !important;
+      transform: translateX(-$triangle_base - $position_x_adjustment - 1em) !important;
     }
   }
   &::after {
