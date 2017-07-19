@@ -9,7 +9,16 @@ docReady(() => {
 
       let popover = document.querySelector('.editor__popover')
       // As @sergio_caelum correctly pointed out, none of this will be "draw" on the screen till the end of the code
-      popover.style.transform = `translate(${event.target.offsetLeft + 10}px, ${event.target.offsetTop - 218}px)`
+      let left = 10
+      let top = 218
+      if (navigator.userAgent.indexOf('Safari') > 0) {
+        left -= 110
+        top += 361
+      }
+      if (navigator.userAgent.indexOf('Firefox') > 0) {
+        top += 7
+      }
+      popover.style.transform = `translate(${event.target.offsetLeft + left}px, ${event.target.offsetTop - top}px)`
       popover.style.display = 'block'
 
       let field = popover.querySelector('.editor__popover__field')
