@@ -1,8 +1,8 @@
 @import '../../scss/common';
 
-.editor {
+.editor__form {
+  display: none;
   &__button {
-    display: none !important;
     position: absolute !important;
     right: 0;
     top: 0;

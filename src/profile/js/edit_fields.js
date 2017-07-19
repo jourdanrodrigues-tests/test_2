@@ -7,16 +7,16 @@ docReady(() => {
   elementsToToggle.push(editBox)
   elementsToToggle.push(document.querySelector('.editor__business_label'))
 
-  let saveButton = document.querySelector('.editor__button[data-for=save]')
-  let cancelButton = document.querySelector('.editor__button[data-for=cancel]')
-  let buttons = [cancelButton, saveButton]
+  let saveButton = document.querySelector('.editor__form__button[data-for=save]')
+  let cancelButton = document.querySelector('.editor__form__button[data-for=cancel]')
+  let form = document.querySelector('.editor__form')
 
   document.querySelectorAll('.editor__field').forEach((item) => {
     elementsToToggle.push(item)
   })
 
   editBox.addEventListener('click', () => {
-    buttons.forEach((el) => { el.setAttribute('style', 'display:inline-block !important') })
+    form.style.display = 'block'
     if (!saveButton.attached) {
       saveButton.addEventListener('click', displayElements)
       cancelButton.addEventListener('click', displayElements)
@@ -25,7 +25,7 @@ docReady(() => {
 
     function displayElements () {
       elementsToToggle.forEach((el) => { el.style.display = el.oldDisplay })
-      buttons.forEach((el) => { el.setAttribute('style', 'display: none !important') })
+      form.style.display = 'none'
     }
 
     elementsToToggle.forEach((el) => {
