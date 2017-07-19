@@ -1,0 +1,31 @@
+@import '../../scss/common';
+
+.editor__form {
+  display: none;
+  padding: 0 2.2em 0 2em;
+  &__field {
+    display: block;
+    width: 100%;
+    &__input {
+      border-bottom-color: $light_color !important;
+    }
+    &__label {
+      text-transform: uppercase;
+      color: $light_color !important;
+    }
+  }
+  &__button {
+    position: absolute !important;
+    right: 0;
+    top: 0;
+    color: $primary_blue;
+    $translateY: 1.7em;
+    $translateX: 6em;
+    &[data-for=cancel] {
+      transform: translate(-$translateX, $translateY) !important;
+    }
+    &[data-for=save] {
+      transform: translate(-$translateX + 5em, $translateY) !important;
+    }
+  }
+}

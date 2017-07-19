@@ -3,7 +3,8 @@ import '../../js/docReady'
 docReady(() => {
   document.querySelectorAll('.editor__field__edit_box').forEach((item) => {
     item.addEventListener('click', (event) => {
-      let content = event.target.parentElement.querySelector('.editor__field__content')
+      let parent = event.target.parentElement
+      let content = parent.querySelector('.editor__field__content')
       let contentValue = content.innerHTML.replace(/(<i.+i>|^\s+|\s+$)/g, '')
 
       let popover = document.querySelector('.editor__popover')
@@ -14,9 +15,17 @@ docReady(() => {
       let field = popover.querySelector('.editor__popover__field')
       field.className += ' is-dirty' // MDL handler
 
-      let input = popover.querySelector('.editor__popover__field__input')
+      let input = field.querySelector('.editor__popover__field__input')
       input.focus()
       input.value = contentValue
+
+      let label = field.querySelector('.editor__popover__field__label')
+      let fieldName = parent.getAttribute('data-field')
+      if (fieldName === 'name') {
+        label.innerHTML = 'Name'
+      } else {
+        label.innerHTML = document.querySelector(`.editor__form__field__label[for=${fieldName}]`).innerHTML
+      }
 
       let saveButton = popover.querySelector('.editor__popover__button[data-for=save]')
       let cancelButton = popover.querySelector('.editor__popover__button[data-for=cancel]')
